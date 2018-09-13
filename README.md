@@ -1,5 +1,5 @@
 # EHFormKit
-表单快速构造
+一个快速构造表单的工具 继承UITableView
 
 ## you say a xx without a picture
 
