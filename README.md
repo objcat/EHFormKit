@@ -1,6 +1,9 @@
 # EHFormKit
 表单快速构造
 
+
+![Image text](https://raw.githubusercontent.com/objcat/EHFormKit/master/image-folder/img.png)
+
     self.title = @"表单演示";
     
     self.tableView = [[EHFormTableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
