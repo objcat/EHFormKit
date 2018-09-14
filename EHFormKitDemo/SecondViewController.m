@@ -72,7 +72,7 @@
     
     [self.tableView addWhiteRowWithBackgroundColor:self.tableView.backgroundColor rowHeight:10 separatorHeight:0 separatorColor:nil separatorOffset:0];
     
-    [self.tableView addRowWithName:@"退出登录" value:nil rowHeight:50 type:EHFormTypeButton canTap:YES canSelected:YES separatorHeight:0.5 separatorColor:separatorColor separatorOffset:30 touchUpInside:^(EHFormModel *model) {
+    [self.tableView addRowWithName:@"退出登录" value:nil rowHeight:50 type:EHFormTypeButton canTap:YES canSelected:YES separatorHeight:0 separatorColor:separatorColor separatorOffset:30 touchUpInside:^(EHFormModel *model) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"是否退出登录" delegate:weakSelf cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
         [alert show];
     }];
