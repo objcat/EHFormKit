@@ -1,5 +1,12 @@
 # EHFormKit
-表单快速构造
+一个快速构造表单的工具 继承UITableView
+
+## you say a xx without a picture
+
+
+![Image text](https://raw.githubusercontent.com/objcat/EHFormKit/master/image-folder/img.png)
+
+## 代码示例
 
     self.title = @"表单演示";
     
