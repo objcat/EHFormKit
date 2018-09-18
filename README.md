@@ -3,8 +3,8 @@
 
 ## you say a xx without a picture
 
-
 ![Image text](https://raw.githubusercontent.com/objcat/EHFormKit/master/image-folder/img.png)
+
 
 ## 代码示例
 
