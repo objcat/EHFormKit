@@ -1,5 +1,5 @@
 # EHFormKit
-一个快速构造表单的工具 继承UITableView
+静态列表构造工具 = = 白猫出品
 
 ## you say a xx without a picture
 
