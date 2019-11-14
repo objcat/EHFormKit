@@ -41,7 +41,6 @@
         [weakSelf logWithModel:model];
     }];
     
-    
     [[self.tableView addUnableTapRowWithName:@"消息免打扰" value:nil cell:@"EHSwitchTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
         if (model.on) {
             NSLog(@"开关on");

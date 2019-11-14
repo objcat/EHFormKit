@@ -14,7 +14,6 @@
 		22530F77214A3B0D00223E55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22530F75214A3B0D00223E55 /* LaunchScreen.storyboard */; };
 		22530F7A214A3B0D00223E55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22530F79214A3B0D00223E55 /* main.m */; };
 		22530FD3214A4DEE00223E55 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22530FD2214A4DEE00223E55 /* SecondViewController.m */; };
-		2D865E3F237D1F0100A4E134 /* timg-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2D865E3E237D1F0000A4E134 /* timg-1.jpeg */; };
 		2D97033A237CF12C00F8F99D /* EHFormTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970313237CF12C00F8F99D /* EHFormTableView.m */; };
 		2D97033B237CF12C00F8F99D /* EHTableViewCellMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970316237CF12C00F8F99D /* EHTableViewCellMap.m */; };
 		2D97033C237CF12C00F8F99D /* EHFormResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D970317237CF12C00F8F99D /* EHFormResources.bundle */; };
@@ -46,7 +45,6 @@
 		22530F79214A3B0D00223E55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22530FD1214A4DEE00223E55 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		22530FD2214A4DEE00223E55 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		2D865E3E237D1F0000A4E134 /* timg-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-1.jpeg"; sourceTree = "<group>"; };
 		2D970312237CF12C00F8F99D /* EHFormTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFormTableView.h; sourceTree = "<group>"; };
 		2D970313237CF12C00F8F99D /* EHFormTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFormTableView.m; sourceTree = "<group>"; };
 		2D970315237CF12C00F8F99D /* EHTableViewCellMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTableViewCellMap.h; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 		22530FD0214A430C00223E55 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2D865E3E237D1F0000A4E134 /* timg-1.jpeg */,
 				22530F6A214A3B0B00223E55 /* AppDelegate.h */,
 				22530F6B214A3B0B00223E55 /* AppDelegate.m */,
 				22530F70214A3B0B00223E55 /* Main.storyboard */,
@@ -333,7 +330,6 @@
 				2D970344237CF12C00F8F99D /* EHTapTableViewCell.xib in Resources */,
 				22530F74214A3B0D00223E55 /* Assets.xcassets in Resources */,
 				2D970343237CF12C00F8F99D /* EHSwitchTableViewCell.xib in Resources */,
-				2D865E3F237D1F0100A4E134 /* timg-1.jpeg in Resources */,
 				2D97033C237CF12C00F8F99D /* EHFormResources.bundle in Resources */,
 				22530F72214A3B0B00223E55 /* Main.storyboard in Resources */,
 				2D97033F237CF12C00F8F99D /* EHPhoneNumberTableViewCell.xib in Resources */,
