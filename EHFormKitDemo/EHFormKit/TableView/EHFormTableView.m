@@ -266,7 +266,6 @@
     }
     self.upHeight = self.frame.size.height + bottomHeight;
     self.downHeight = self.frame.size.height;
-    NSLog(@"aaaaa ----  %lf", self.frame.size.height);
 }
 
 - (UIViewController *)viewController {
@@ -287,7 +286,7 @@
     }
 }
 
-- (void)removeRowWithTitle:(NSString *)title reloadData:(BOOL)reloadData {
+- (void)removeRowWithName:(NSString *)title reloadData:(BOOL)reloadData {
     EHFormModel *model = self.indexDic[title];
     NSInteger index = [self.sourceArray indexOfObject:model];
     [self.indexDic removeObjectForKey:title];
@@ -358,19 +357,19 @@
     return pass;
 }
 
-- (EHFormModel *)firstModelWithTitle:(NSString *)title {
+- (EHFormModel *)firstModelWithName:(NSString *)name {
     for (EHFormModel *model in self.sourceArray) {
-        if ([model.name isEqualToString:@"title"]) {
+        if ([model.name isEqualToString:name]) {
             return model;
         }
     }
     return nil;
 }
 
-- (NSArray *)modelsWithTitle:(NSString *)title {
+- (NSArray *)modelsWithName:(NSString *)name {
     NSMutableArray *arr = [NSMutableArray array];
     for (EHFormModel *model in self.sourceArray) {
-        if ([model.name isEqualToString:@"title"]) {
+        if ([model.name isEqualToString:name]) {
             [arr addObject:model];
         }
     }

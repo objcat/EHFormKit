@@ -41,4 +41,8 @@
     }
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"name: %@ value: %@ 指针: %@", self.name, self.value, [super description]];
+}
+
 @end

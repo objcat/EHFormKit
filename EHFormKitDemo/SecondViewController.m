@@ -85,6 +85,14 @@
         [alert addAction:cancel];
         [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
     }];
+    
+    
+    NSLog(@"%@", [self.tableView firstModelWithName:@"退出登录"]);
+    
+    for (EHFormModel *model in [self.tableView modelsWithName:@"个人资料"]) {
+        // 该方法是取出所有
+        NSLog(@"%@", model);
+    }
 }
 
 

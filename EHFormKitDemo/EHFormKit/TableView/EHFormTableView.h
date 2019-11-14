@@ -88,12 +88,12 @@
 
 
 /// 根据标题获取模型
-/// @param title 标题(name)
-- (EHFormModel *)firstModelWithTitle:(NSString *)title;
+/// @param name 标题(name)
+- (EHFormModel *)firstModelWithName:(NSString *)name;
 
 /// 获取所有指定标题模型的数组
-/// @param title 标题(name)
-- (NSArray *)modelsWithTitle:(NSString *)title;
+/// @param name 标题(name)
+- (NSArray *)modelsWithName:(NSString *)name;
 
 /// 根据索引获取标题
 /// @param index 索引位置
@@ -108,9 +108,9 @@
 
 
 /// 根据标题删除行
-/// @param title 标题(name)
+/// @param name 标题
 /// @param reloadData 是否刷新
-- (void)removeRowWithTitle:(NSString *)title reloadData:(BOOL)reloadData;
+- (void)removeRowWithName:(NSString *)name reloadData:(BOOL)reloadData;
 
 
 /// 根据index删除(索引数组中)的行
