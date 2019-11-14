@@ -78,6 +78,7 @@
     [self.tableView addNormalRowWithName:@"退出登录" value:nil cell:@"EHButtonTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否退出登录" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *determin = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [weakSelf.navigationController popViewControllerAnimated:YES];
         }];
         UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         }];
