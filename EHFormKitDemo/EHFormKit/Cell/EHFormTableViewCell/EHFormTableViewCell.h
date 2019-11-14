@@ -10,7 +10,8 @@
 #import "EHBundleHelper.h"
 
 @interface EHFormTableViewCell : UITableViewCell
-@property (copy, nonatomic) void (^touchUpInside) (EHFormModel *model);
+@property (copy, nonatomic) void (^callBack) (EHFormModel *model);
+@property (strong, nonatomic) void (^beginEditingBlock) (EHFormModel *model);
 @property (nonatomic, strong) CALayer *lineLayer;
 @property (nonatomic, strong) EHFormModel *model;
 @end

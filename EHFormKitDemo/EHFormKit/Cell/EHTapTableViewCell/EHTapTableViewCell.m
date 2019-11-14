@@ -22,7 +22,7 @@
     // Initialization code
     self.arrowsButton.userInteractionEnabled = NO;
     [self.arrowsButton setImage:[[UIImage imageWithContentsOfFile:[EHBundleHelper pathForResource:@"arrow" ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-    self.arrowsButton.tintColor = RGBA(197, 197, 202, 1);
+    self.arrowsButton.tintColor = [UIColor colorWithRed:197 / 255.0 green:197 / 255.0 blue:202 / 255.0 alpha:1];
 }
 
 @end

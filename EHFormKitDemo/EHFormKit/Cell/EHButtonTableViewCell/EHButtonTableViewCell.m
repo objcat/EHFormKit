@@ -31,8 +31,8 @@
 }
 
 - (void)onClick:(UIButton *)button {
-    if (self.touchUpInside) {
-        self.touchUpInside(self.model);
+    if (self.callBack) {
+        self.callBack(self.model);
     }
 }
 

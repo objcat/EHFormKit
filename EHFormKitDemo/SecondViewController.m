@@ -15,6 +15,11 @@
 
 @implementation SecondViewController
 
+
+- (void)logWithModel:(EHFormModel *)model {
+    NSLog(@"点击%@ 该行的索引为%ld, 去掉空白行该行的索引为%ld",model.name, [self.tableView.sourceArray indexOfObject:model], [self.tableView.indexArray indexOfObject:model]);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -24,57 +29,62 @@
     self.tableView = [[EHFormTableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     [self.view addSubview:self.tableView];
     
-    UIColor *separatorColor = RGBA(200, 199, 204, 1);
-    
     __weak typeof(self) weakSelf = self;
     
-    [self.tableView addWhiteRowWithBackgroundColor:self.tableView.backgroundColor rowHeight:10 separatorHeight:0 separatorColor:separatorColor separatorOffset:0];
+    [self.tableView addWhiteRowWithcell:@"EHWhiteRowTableViewCell" BackgroundColor:self.tableView.backgroundColor rowHeight:16 separatorHeight:0 separatorColor:nil separatorOffset:0];
     
-    [self.tableView addRowWithName:@"个人资料" value:nil rowHeight:50 type:EHFormTypeTap canTap:YES canSelected:YES separatorHeight:0.5 separatorColor:separatorColor separatorOffset:30 touchUpInside:^(EHFormModel *model) {
-        NSLog(@"点击个人资料 %ld 行", [weakSelf.tableView.arr indexOfObject:model]);
+    [self.tableView addNormalRowWithName:@"个人资料" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+        [weakSelf logWithModel:model];
     }];
     
-    [self.tableView addRowWithName:@"客服电话" value:@"1388888888" rowHeight:50 type:EHFormTypeTelephone canTap:YES canSelected:YES separatorHeight:0.5 separatorColor:separatorColor separatorOffset:30 touchUpInside:^(EHFormModel *model) {
-        NSLog(@"点击客服电话");
+    [self.tableView addNormalRowWithName:@"客服电话" value:@"1388888888" cell:@"EHPhoneNumberTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+        [weakSelf logWithModel:model];
     }];
     
-    EHFormModel *switchModel = [self.tableView addRowWithName:@"消息免打扰" value:@"1388888888" rowHeight:50 type:EHFormTypeSwitch canTap:NO canSelected:NO separatorHeight:0.5 separatorColor:separatorColor separatorOffset:30 touchUpInside:^(EHFormModel *model) {
+    
+    [[self.tableView addUnableTapRowWithName:@"消息免打扰" value:nil cell:@"EHSwitchTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
         if (model.on) {
             NSLog(@"开关on");
         } else {
             NSLog(@"开关off");
         }
+    }] eh_attributed:^(EHFormModel *model) {
+        // 设置开关默认值
+        model.on = YES;
     }];
     
-    switchModel.on = YES;
+    [self.tableView addWhiteRowWithcell:@"EHWhiteRowTableViewCell" BackgroundColor:self.tableView.backgroundColor rowHeight:16 separatorHeight:0 separatorColor:nil separatorOffset:0];
     
-    [self.tableView addRowWithName:@"姓名" value:@"张三" rowHeight:50 type:EHFormTypeLabel canTap:NO canSelected:NO separatorHeight:0 separatorColor:separatorColor separatorOffset:30 touchUpInside:^(EHFormModel *model) {
-        NSLog(@"点击个人资料");
+    [self.tableView addNormalRowWithName:@"个人资料" value:nil cell:@"EHTapTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+        [weakSelf logWithModel:model];
     }];
     
-    [self.tableView addWhiteRowWithBackgroundColor:self.tableView.backgroundColor rowHeight:10 separatorHeight:0 separatorColor:nil separatorOffset:0];
-    
-    [self.tableView addRowWithName:@"个人资料" value:nil rowHeight:50 type:EHFormTypeTap canTap:YES canSelected:YES separatorHeight:0.5 separatorColor:separatorColor separatorOffset:30 touchUpInside:^(EHFormModel *model) {
-        NSLog(@"点击个人资料");
+    [self.tableView addNormalRowWithName:@"客服电话" value:@"1388888888" cell:@"EHPhoneNumberTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+        [weakSelf logWithModel:model];
     }];
     
-    [self.tableView addRowWithName:@"客服电话" value:@"1388888888" rowHeight:50 type:EHFormTypeTelephone canTap:YES canSelected:YES separatorHeight:0.5 separatorColor:separatorColor separatorOffset:30 touchUpInside:^(EHFormModel *model) {
-        NSLog(@"点击客服电话");
-    }];
-    
-    [self.tableView addRowWithName:@"消息免打扰" value:@"1388888888" rowHeight:50 type:EHFormTypeSwitch canTap:NO canSelected:NO separatorHeight:0 separatorColor:separatorColor separatorOffset:30 touchUpInside:^(EHFormModel *model) {
+    [[self.tableView addUnableTapRowWithName:@"消息免打扰" value:nil cell:@"EHSwitchTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
         if (model.on) {
             NSLog(@"开关on");
         } else {
             NSLog(@"开关off");
         }
+    }] eh_attributed:^(EHFormModel *model) {
+        // 设置开关默认值
+        model.on = YES;
     }];
     
-    [self.tableView addWhiteRowWithBackgroundColor:self.tableView.backgroundColor rowHeight:10 separatorHeight:0 separatorColor:nil separatorOffset:0];
+    [self.tableView addWhiteRowWithcell:@"EHWhiteRowTableViewCell" BackgroundColor:self.tableView.backgroundColor rowHeight:30 separatorHeight:0 separatorColor:nil separatorOffset:0];
     
-    [self.tableView addRowWithName:@"退出登录" value:nil rowHeight:50 type:EHFormTypeButton canTap:YES canSelected:YES separatorHeight:0 separatorColor:separatorColor separatorOffset:30 touchUpInside:^(EHFormModel *model) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"是否退出登录" delegate:weakSelf cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-        [alert show];
+    [self.tableView addNormalRowWithName:@"退出登录" value:nil cell:@"EHButtonTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否退出登录" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *determin = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        }];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        }];
+        [alert addAction:determin];
+        [alert addAction:cancel];
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
     }];
 }
 

@@ -21,10 +21,10 @@
 }
 
 - (IBAction)valueChanged:(id)sender {
-    if (self.touchUpInside) {
+    if (self.callBack) {
         UISwitch *switchz = sender;
         self.model.on = switchz.on;
-        self.touchUpInside(self.model);
+        self.callBack(self.model);
     }
 }
 

@@ -8,49 +8,37 @@
 
 #import "EHFormModel.h"
 
+@interface EHFormModel ()
+/// 字典容器储存扩展数据
+@property (nonatomic, strong) NSMutableDictionary *ext;
+@end
+
 @implementation EHFormModel
 
-- (NSString *)reuseIdentifier {
-    switch (self.type) {
-            
-        case EHFormTypeTap: {
-            return @"EHTapTableViewCell";
-            break;
-        }
-            
-        case EHFormTypeWhiteRow: {
-            return @"EHWhiteRowTableViewCell";
-            break;
-        }
-            
-        case EHFormTypeTelephone: {
-            return @"EHPhoneNumberTableViewCell";
-            break;
-        }
-            
-        case EHFormTypeSwitch: {
-            return @"EHSwitchTableViewCell";
-            break;
-        }
-            
-        case EHFormTypeButton: {
-            return @"EHButtonTableViewCell";
-            break;
-        }
-            
-        case EHFormTypeLabel: {
-            return @"EHLabelTableViewCell";
-            break;
-        }
-            
-        default:
-            return nil;
-            break;
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.ext = [NSMutableDictionary dictionary];
+        self.submitValue = @"";
     }
+    return self;
 }
 
 + (EHFormModel *)converEHFormModel:(id)object {
     return (EHFormModel *)object;
+}
+
+- (void)eh_attributed:(void (^)(EHFormModel *))attributed {
+    attributed(self);
+}
+
+- (BOOL)useXib {
+    NSString *path = [[NSBundle mainBundle] pathForResource:self.cell ofType:@"nib"];
+    if (path) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 @end

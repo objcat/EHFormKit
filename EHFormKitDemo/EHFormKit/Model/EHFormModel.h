@@ -1,5 +1,5 @@
 //
-//  EHForml.h
+//  EHFormModel.h
 //  ExpandHouseProject
 //
 //  Created by 张祎 on 2018/1/11.
@@ -9,55 +9,51 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#define FORM(x) [EHForm converEHForm:x]
-#define RGBA(r,g,b,a) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a]
-
-typedef NS_ENUM(NSUInteger, EHFormType) {
-    /** 可点击类型 */
-    EHFormTypeTap,
-    /** 按钮类型 */
-    EHFormTypeButton,
-    /** 电话类型 */
-    EHFormTypeTelephone,
-    /** 文本展示类型 */
-    EHFormTypeLabel,
-    /** switch类型 */
-    EHFormTypeSwitch,
-    /** 分隔行类型 */
-    EHFormTypeWhiteRow,
-};
-
 @interface EHFormModel : NSObject
 
-/** 标题 */
-@property (nonatomic, strong) NSString *name;
-/** 值 */
-@property (nonatomic, strong) NSString *value;
-/** 重用池名字 */
-@property (strong, nonatomic) NSString *reuseIdentifier;
-/** 线高度 */
+/// 标题/索引
+@property (strong, nonatomic) NSString *name;
+/// 值
+@property (strong, nonatomic) NSString *value;
+/// 提交名
+@property (strong, nonatomic) NSString *submitName;
+/// 提交值
+@property (strong, nonatomic) NSString *submitValue;
+/// 附加模型 - 有时候需要传一个model过去
+@property (strong, nonatomic) id model;
+/// ext容器 - 储存更多的数据
+@property (strong, nonatomic, readonly) NSMutableDictionary *ext;
+/// 线高度
 @property (assign, nonatomic) CGFloat separatorHeight;
-/** 线颜色 */
+/// 线颜色
 @property (strong, nonatomic) UIColor *separatorColor;
-/** 线偏移 */
+/// 线偏移
 @property (assign, nonatomic) CGFloat separatorOffset;
-/** 行高 */
+/// 行高
 @property (assign, nonatomic) CGFloat rowHeight;
-/** 背景颜色 空行类型可以用 */
+/// 背景颜色 空行类型可以用
 @property (strong, nonatomic) UIColor *backgroundColor;
-/** 表单类型 */
-@property (nonatomic, assign) EHFormType type;
-/** 是否可点击 */
-@property (nonatomic, assign) BOOL canTap;
-/** 是否可选中 */
-@property (nonatomic, assign) BOOL canSelected;
-/** arr容器 */
-@property (nonatomic, strong) NSArray *arr;
-/** dic容器 */
-@property (nonatomic, strong) NSMutableDictionary *dic;
-/** 点击回调 */
-@property (copy, nonatomic) void (^touchUpInside) (EHFormModel *);
-/** 开关是否打开 - 仅在EHFormTypeSwitch有效 */
+/// 表单cell
+@property (strong, nonatomic) NSString *cell;
+/// 是否为空白行
+@property (assign, nonatomic) BOOL isWhiteRow;
+/// 是否可点击
+@property (assign, nonatomic) BOOL canTap;
+/// 是否可选中
+@property (assign, nonatomic) BOOL canSelected;
+/// 是否可交互
+@property (assign, nonatomic) BOOL userInteractionEnabled;
+/// 开关是否打开 - 仅在EHFormTypeSwitch有效
 @property (assign, nonatomic) BOOL on;
+/// 是否使用xib
+@property (assign, nonatomic) BOOL useXib;
+/// 是否改变过
+@property (assign, nonatomic) BOOL isChanged;
+/// 事件回调 无论什么事件 均可以通过该方法回调
+@property (copy, nonatomic) void (^callBack) (EHFormModel *);
+/// 富文本placeHolder
+@property (strong, nonatomic) NSAttributedString *attributedPlaceHolder;
+/// 扩展属性补充
+- (void)eh_attributed:(void (^) (EHFormModel *model))attributed;
 
 @end
