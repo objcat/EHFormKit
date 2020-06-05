@@ -188,6 +188,7 @@
     
     EHFormModel *model = self.sourceArray[indexPath.row];
     
+    // 是否使用Xib
     if (model.useXib) {
         [self registerNib:[UINib nibWithNibName:model.cell bundle:nil] forCellReuseIdentifier:model.cell];
     } else {
@@ -195,10 +196,14 @@
     }
     
     __weak typeof(self) weakSelf = self;
+    // 使用多态节省代码
     EHFormTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:model.cell];
     cell.model = model;
+    // 事件回调
     cell.callBack = model.callBack;
+    // 开始编辑回调
     cell.beginEditingBlock = ^(EHFormModel *formModel){
+        // 获取文本框所在行, 主要用于滚动到所在行, 防止键盘遮挡文本输入框, 默认不开启 autoScrollToTextField
         weakSelf.editRow = [weakSelf.sourceArray indexOfObject:formModel];
     };
     if (model.canSelected) cell.selectionStyle = UITableViewCellSelectionStyleDefault;

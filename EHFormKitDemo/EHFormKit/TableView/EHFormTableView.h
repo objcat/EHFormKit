@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "EHFormModel.h"
-//#import "EHFormTableViewProtocol.h"
 
 @protocol EHFormTableViewProtocol <NSObject>
+// 滚动代理方法 可以自己进行扩展
 - (void)eh_scrollViewDidScroll:(UIScrollView *)scrollView;
 @end
 
+/// 快速构建表单工具
 @interface EHFormTableView : UITableView
 
 /// 数据源
