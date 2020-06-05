@@ -28,6 +28,7 @@
     
     self.tableView = [[EHFormTableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     [self.view addSubview:self.tableView];
+    // 开启自动滚动到输入框
     self.tableView.autoScrollToTextField = YES;
     
     __weak typeof(self) weakSelf = self;
@@ -74,12 +75,11 @@
         model.on = YES;
     }];
     
-    [self.tableView addWhiteRowWithcell:@"EHWhiteRowTableViewCell" BackgroundColor:self.tableView.backgroundColor rowHeight:30 separatorHeight:0 separatorColor:nil separatorOffset:0];
-    
-    
     [self.tableView addNormalRowWithName:@"请输入用户名" value:@"" cell:@"EHTextFieldTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
         
     }];
+    
+    [self.tableView addWhiteRowWithcell:@"EHWhiteRowTableViewCell" BackgroundColor:self.tableView.backgroundColor rowHeight:30 separatorHeight:0 separatorColor:nil separatorOffset:0];
     
     [self.tableView addNormalRowWithName:@"退出登录" value:nil cell:@"EHButtonTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否退出登录" preferredStyle:UIAlertControllerStyleAlert];

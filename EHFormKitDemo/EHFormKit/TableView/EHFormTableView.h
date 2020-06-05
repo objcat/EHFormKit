@@ -22,7 +22,7 @@
 @property (strong, nonatomic, readonly) NSMutableArray *indexArray;
 /// 代理回调
 @property (weak, nonatomic) id <EHFormTableViewProtocol> formDelegate;
-/// 开启自动滚动到文本框
+/// 开启自动滚动到文本框 - 防止键盘遮挡
 @property (assign, nonatomic) BOOL autoScrollToTextField;
 
 
