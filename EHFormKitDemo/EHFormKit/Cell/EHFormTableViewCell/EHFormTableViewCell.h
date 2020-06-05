@@ -7,7 +7,6 @@
 //
 
 #import "EHFormModel.h"
-#import "EHBundleHelper.h"
 
 @interface EHFormTableViewCell : UITableViewCell
 @property (copy, nonatomic) void (^callBack) (EHFormModel *model);

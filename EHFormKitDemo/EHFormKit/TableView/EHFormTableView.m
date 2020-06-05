@@ -16,22 +16,22 @@
 
 @interface EHFormTableView () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
-/** 数据源 */
+/// 数据源
 @property (strong, nonatomic) NSMutableArray *sourceArray;
-/** 字典索引 */
+/// 字典索引
 @property (strong, nonatomic) NSMutableDictionary *indexDic;
 
-/** 线的颜色 */
+/// 线的颜色
 @property (strong, nonatomic) UIColor *sColor;
-/** 线的偏移量 */
+/// 线的偏移量
 @property (assign, nonatomic) CGFloat sOffset;
 
-/** 键盘弹出tableView高度参考 */
+/// 键盘弹出tableView高度参考
 @property (assign, nonatomic) CGFloat upHeight;
-/** 键盘收起tableView高度参考 */
+/// 键盘收起tableView高度参考
 @property (assign, nonatomic) CGFloat downHeight;
 
-/** 处于编辑的行 */
+/// 处于编辑的行
 @property (assign, nonatomic) NSInteger editRow;
 
 @end
@@ -55,14 +55,13 @@
 }
 
 - (void)keyboardWillShown:(NSNotification *)notification {
-    if (!self.keyBoardObserver) {
+    if (!self.autoScrollToTextField) {
         return;
     }
     NSDictionary *userInfo = [notification userInfo];
     CGFloat duration = [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
     NSValue *value = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
     CGSize keyboardSize = [value CGRectValue].size;
-    NSLog(@"%@", NSStringFromCGSize(keyboardSize));
     [UIView animateWithDuration:duration animations:^{
         CGRect frame = self.frame;
         frame.size.height = self.upHeight - keyboardSize.height;
@@ -72,7 +71,7 @@
 }
 
 - (void)keyboardWillBeHidden:(NSNotification *)notification {
-    if (!self.keyBoardObserver) {
+    if (!self.autoScrollToTextField) {
         return;
     }
     NSDictionary *userInfo = [notification userInfo];
@@ -308,7 +307,10 @@
 }
 
 - (void)dealloc {
-    NSLog(@"表单释放");
+    NSLog(@"EHFormKit释放");
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [center removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (NSMutableDictionary *)dumpSubmitDictionary {

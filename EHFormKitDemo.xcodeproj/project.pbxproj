@@ -15,7 +15,6 @@
 		22530F7A214A3B0D00223E55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22530F79214A3B0D00223E55 /* main.m */; };
 		22530FD3214A4DEE00223E55 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22530FD2214A4DEE00223E55 /* SecondViewController.m */; };
 		2D97033A237CF12C00F8F99D /* EHFormTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970313237CF12C00F8F99D /* EHFormTableView.m */; };
-		2D97033B237CF12C00F8F99D /* EHTableViewCellMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970316237CF12C00F8F99D /* EHTableViewCellMap.m */; };
 		2D97033C237CF12C00F8F99D /* EHFormResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D970317237CF12C00F8F99D /* EHFormResources.bundle */; };
 		2D97033D237CF12C00F8F99D /* EHWhiteRowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D97031C237CF12C00F8F99D /* EHWhiteRowTableViewCell.m */; };
 		2D97033E237CF12C00F8F99D /* EHPhoneNumberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970320237CF12C00F8F99D /* EHPhoneNumberTableViewCell.m */; };
@@ -29,7 +28,8 @@
 		2D970346237CF12C00F8F99D /* EHLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970332237CF12C00F8F99D /* EHLabelTableViewCell.m */; };
 		2D970347237CF12C00F8F99D /* EHLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D970333237CF12C00F8F99D /* EHLabelTableViewCell.xib */; };
 		2D970348237CF12C00F8F99D /* EHFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970335237CF12C00F8F99D /* EHFormModel.m */; };
-		2D970349237CF12C00F8F99D /* EHBundleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970339237CF12C00F8F99D /* EHBundleHelper.m */; };
+		9A818E6E248A0B09003EC518 /* EHTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E6C248A0B09003EC518 /* EHTextFieldTableViewCell.m */; };
+		9A818E6F248A0B09003EC518 /* EHTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A818E6D248A0B09003EC518 /* EHTextFieldTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +47,7 @@
 		22530FD2214A4DEE00223E55 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		2D970312237CF12C00F8F99D /* EHFormTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFormTableView.h; sourceTree = "<group>"; };
 		2D970313237CF12C00F8F99D /* EHFormTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFormTableView.m; sourceTree = "<group>"; };
-		2D970315237CF12C00F8F99D /* EHTableViewCellMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTableViewCellMap.h; sourceTree = "<group>"; };
-		2D970316237CF12C00F8F99D /* EHTableViewCellMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTableViewCellMap.m; sourceTree = "<group>"; };
 		2D970317237CF12C00F8F99D /* EHFormResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EHFormResources.bundle; sourceTree = "<group>"; };
-		2D970319237CF12C00F8F99D /* EHFormTableViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFormTableViewProtocol.h; sourceTree = "<group>"; };
 		2D97031C237CF12C00F8F99D /* EHWhiteRowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHWhiteRowTableViewCell.m; sourceTree = "<group>"; };
 		2D97031D237CF12C00F8F99D /* EHWhiteRowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHWhiteRowTableViewCell.h; sourceTree = "<group>"; };
 		2D97031F237CF12C00F8F99D /* EHPhoneNumberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHPhoneNumberTableViewCell.h; sourceTree = "<group>"; };
@@ -71,8 +68,9 @@
 		2D970333237CF12C00F8F99D /* EHLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHLabelTableViewCell.xib; sourceTree = "<group>"; };
 		2D970335237CF12C00F8F99D /* EHFormModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFormModel.m; sourceTree = "<group>"; };
 		2D970336237CF12C00F8F99D /* EHFormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFormModel.h; sourceTree = "<group>"; };
-		2D970338237CF12C00F8F99D /* EHBundleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHBundleHelper.h; sourceTree = "<group>"; };
-		2D970339237CF12C00F8F99D /* EHBundleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHBundleHelper.m; sourceTree = "<group>"; };
+		9A818E6B248A0B09003EC518 /* EHTextFieldTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EHTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		9A818E6C248A0B09003EC518 /* EHTextFieldTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EHTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		9A818E6D248A0B09003EC518 /* EHTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EHTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,13 +130,10 @@
 		2D970310237CF12C00F8F99D /* EHFormKit */ = {
 			isa = PBXGroup;
 			children = (
+				9A818E69248A0831003EC518 /* Resources */,
 				2D970311237CF12C00F8F99D /* TableView */,
-				2D970314237CF12C00F8F99D /* config */,
-				2D970317237CF12C00F8F99D /* EHFormResources.bundle */,
-				2D970318237CF12C00F8F99D /* protocol */,
 				2D97031A237CF12C00F8F99D /* Cell */,
 				2D970334237CF12C00F8F99D /* Model */,
-				2D970337237CF12C00F8F99D /* Tool */,
 			);
 			path = EHFormKit;
 			sourceTree = "<group>";
@@ -152,26 +147,10 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
-		2D970314237CF12C00F8F99D /* config */ = {
-			isa = PBXGroup;
-			children = (
-				2D970315237CF12C00F8F99D /* EHTableViewCellMap.h */,
-				2D970316237CF12C00F8F99D /* EHTableViewCellMap.m */,
-			);
-			path = config;
-			sourceTree = "<group>";
-		};
-		2D970318237CF12C00F8F99D /* protocol */ = {
-			isa = PBXGroup;
-			children = (
-				2D970319237CF12C00F8F99D /* EHFormTableViewProtocol.h */,
-			);
-			path = protocol;
-			sourceTree = "<group>";
-		};
 		2D97031A237CF12C00F8F99D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				9A818E6A248A0ADF003EC518 /* EHTextFieldTableViewCell */,
 				2D97031B237CF12C00F8F99D /* EHWhiteRowTableViewCell */,
 				2D97031E237CF12C00F8F99D /* EHPhoneNumberTableViewCell */,
 				2D970322237CF12C00F8F99D /* EHButtonTableViewCell */,
@@ -186,8 +165,8 @@
 		2D97031B237CF12C00F8F99D /* EHWhiteRowTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				2D97031C237CF12C00F8F99D /* EHWhiteRowTableViewCell.m */,
 				2D97031D237CF12C00F8F99D /* EHWhiteRowTableViewCell.h */,
+				2D97031C237CF12C00F8F99D /* EHWhiteRowTableViewCell.m */,
 			);
 			path = EHWhiteRowTableViewCell;
 			sourceTree = "<group>";
@@ -223,9 +202,9 @@
 		2D970328237CF12C00F8F99D /* EHSwitchTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				2D97032B237CF12C00F8F99D /* EHSwitchTableViewCell.h */,
 				2D970329237CF12C00F8F99D /* EHSwitchTableViewCell.m */,
 				2D97032A237CF12C00F8F99D /* EHSwitchTableViewCell.xib */,
-				2D97032B237CF12C00F8F99D /* EHSwitchTableViewCell.h */,
 			);
 			path = EHSwitchTableViewCell;
 			sourceTree = "<group>";
@@ -259,13 +238,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		2D970337237CF12C00F8F99D /* Tool */ = {
+		9A818E69248A0831003EC518 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2D970338237CF12C00F8F99D /* EHBundleHelper.h */,
-				2D970339237CF12C00F8F99D /* EHBundleHelper.m */,
+				2D970317237CF12C00F8F99D /* EHFormResources.bundle */,
 			);
-			path = Tool;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9A818E6A248A0ADF003EC518 /* EHTextFieldTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9A818E6B248A0B09003EC518 /* EHTextFieldTableViewCell.h */,
+				9A818E6C248A0B09003EC518 /* EHTextFieldTableViewCell.m */,
+				9A818E6D248A0B09003EC518 /* EHTextFieldTableViewCell.xib */,
+			);
+			path = EHTextFieldTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +320,7 @@
 				2D970343237CF12C00F8F99D /* EHSwitchTableViewCell.xib in Resources */,
 				2D97033C237CF12C00F8F99D /* EHFormResources.bundle in Resources */,
 				22530F72214A3B0B00223E55 /* Main.storyboard in Resources */,
+				9A818E6F248A0B09003EC518 /* EHTextFieldTableViewCell.xib in Resources */,
 				2D97033F237CF12C00F8F99D /* EHPhoneNumberTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,15 +333,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				22530F6F214A3B0B00223E55 /* ViewController.m in Sources */,
-				2D97033B237CF12C00F8F99D /* EHTableViewCellMap.m in Sources */,
 				2D970340237CF12C00F8F99D /* EHButtonTableViewCell.m in Sources */,
 				2D97033E237CF12C00F8F99D /* EHPhoneNumberTableViewCell.m in Sources */,
 				2D970341237CF12C00F8F99D /* EHFormTableViewCell.m in Sources */,
 				22530F7A214A3B0D00223E55 /* main.m in Sources */,
 				2D970348237CF12C00F8F99D /* EHFormModel.m in Sources */,
-				2D970349237CF12C00F8F99D /* EHBundleHelper.m in Sources */,
 				22530FD3214A4DEE00223E55 /* SecondViewController.m in Sources */,
 				2D970342237CF12C00F8F99D /* EHSwitchTableViewCell.m in Sources */,
+				9A818E6E248A0B09003EC518 /* EHTextFieldTableViewCell.m in Sources */,
 				2D970345237CF12C00F8F99D /* EHTapTableViewCell.m in Sources */,
 				2D97033A237CF12C00F8F99D /* EHFormTableView.m in Sources */,
 				2D970346237CF12C00F8F99D /* EHLabelTableViewCell.m in Sources */,

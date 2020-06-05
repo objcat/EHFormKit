@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "EHFormModel.h"
-#import "EHFormTableViewProtocol.h"
+//#import "EHFormTableViewProtocol.h"
+
+@protocol EHFormTableViewProtocol <NSObject>
+- (void)eh_scrollViewDidScroll:(UIScrollView *)scrollView;
+@end
 
 @interface EHFormTableView : UITableView
 
@@ -18,8 +22,8 @@
 @property (strong, nonatomic, readonly) NSMutableArray *indexArray;
 /// 代理回调
 @property (weak, nonatomic) id <EHFormTableViewProtocol> formDelegate;
-/// YES移除监听 NO开启监听
-@property (assign, nonatomic) BOOL keyBoardObserver;
+/// 开启自动滚动到文本框
+@property (assign, nonatomic) BOOL autoScrollToTextField;
 
 
 /// 插入表单
