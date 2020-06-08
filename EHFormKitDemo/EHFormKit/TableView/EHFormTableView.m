@@ -38,6 +38,11 @@
 
 @implementation EHFormTableView
 
++ (instancetype)tableView {
+    EHFormTableView *tableView = [[self alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    return tableView;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
     self = [super initWithFrame:frame style:style];
     if (self) {
@@ -83,8 +88,22 @@
     }];
 }
 
-- (EHFormModel *)modelWithIndex:(NSInteger)index {
-    return self.indexArray[index];
+- (EHFormModel *)modelWithIndex:(NSInteger)index isReal:(BOOL)isReal {
+    if (isReal) {
+        return self.sourceArray[index];
+    } else {
+        return self.indexArray[index];
+    }
+}
+
+- (NSInteger)indexWithModel:(EHFormModel *)model isReal:(BOOL)isReal {
+    NSInteger index = 0;
+    if (isReal) {
+        index = [self.sourceArray indexOfObject:model];
+    } else {
+        index = [self.indexArray indexOfObject:model];
+    }
+    return index;
 }
 
 - (UIViewController *)getSuperViewController:(UIView *)view {

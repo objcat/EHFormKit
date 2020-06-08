@@ -17,6 +17,9 @@
 /// 快速构建表单工具
 @interface EHFormTableView : UITableView
 
+/// 初始化方法, 默认frame是CGRectZero
++ (instancetype)tableView;
+
 /// 数据源
 @property (strong, nonatomic, readonly) NSMutableArray *sourceArray;
 /// 索引数组
@@ -64,7 +67,7 @@
                             rowHeight:(CGFloat)rowHeight
                              callBack:(void (^) (EHFormModel *model))callBack;
 
- ///插入不能点击的表单
+///插入不能点击的表单
 /// @param name 名称
 /// @param value 值
 /// @param cell 类型
@@ -100,17 +103,21 @@
 /// @param name 标题(name)
 - (NSArray *)modelsWithName:(NSString *)name;
 
-/// 根据索引获取标题
+/// 根据索引获取model
 /// @param index 索引位置
-- (EHFormModel *)modelWithIndex:(NSInteger)index;
+/// @param isReal 是否为真实索引 - 是否包含空白行 如果是YES 则把空白行都算在内
+- (EHFormModel *)modelWithIndex:(NSInteger)index isReal:(BOOL)isReal;
 
+/// 获取model的索引
+/// @param model model
+/// @param isReal 是否为真实索引 - 是否包含空白行 如果是YES 则把空白行都算在内
+- (NSInteger)indexWithModel:(EHFormModel *)model isReal:(BOOL)isReal;
 
 /// 设置键盘弹出和键盘收起的tableView高度参考
 /// 此方法是解决键盘弹出时遮挡表单的问题
 /// @param upHeight 键盘弹出tableView高度参考
 /// @param downHeight 键盘收起tableView高度参考
 - (void)setUpHeight:(CGFloat)upHeight downHeight:(CGFloat)downHeight;
-
 
 /// 根据标题删除行
 /// @param name 标题
@@ -137,5 +144,7 @@
 
 /// 检测空值(修改检测: 与上面不同的是 没改动过的字段不被认为是空值)
 - (BOOL)checkAlterEmpty;
+
+
 
 @end

@@ -20,7 +20,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.tableView = [[EHFormTableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    self.tableView = [EHFormTableView tableView];
+    self.tableView.frame = self.view.bounds;
+    NSLog(@"%@", NSStringFromCGRect(self.view.bounds));
     [self.view addSubview:self.tableView];
     
     __weak typeof(self) weakSelf = self;

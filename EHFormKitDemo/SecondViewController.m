@@ -26,7 +26,8 @@
     
     self.title = @"表单演示";
     
-    self.tableView = [[EHFormTableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    self.tableView = [EHFormTableView tableView];
+    self.tableView.frame = self.view.bounds;
     [self.view addSubview:self.tableView];
     // 开启自动滚动到输入框
     self.tableView.autoScrollToTextField = YES;
@@ -49,9 +50,12 @@
         } else {
             NSLog(@"开关off");
         }
-    }] eh_attributed:^(EHFormModel *model) {
-        // 设置开关默认值
-        model.on = YES;
+    }] eh_attributed:^(EHFormModel *attributed) {
+        /**
+         * 注意attributed为model补充属性, 你可以在里面设置一些默认值或者给model赋一些必要的值, 这些都能在初始化cell的时候获取到
+         */
+        // 例如: 设置开关默认值
+        attributed.on = YES;
     }];
     
     [self.tableView addWhiteRowWithcell:@"EHWhiteRowTableViewCell" BackgroundColor:self.tableView.backgroundColor rowHeight:16 separatorHeight:0 separatorColor:nil separatorOffset:0];
@@ -70,9 +74,9 @@
         } else {
             NSLog(@"开关off");
         }
-    }] eh_attributed:^(EHFormModel *model) {
+    }] eh_attributed:^(EHFormModel *attributed) {
         // 设置开关默认值
-        model.on = YES;
+        attributed.on = YES;
     }];
     
     [self.tableView addNormalRowWithName:@"请输入用户名" value:@"" cell:@"EHTextFieldTableViewCell" rowHeight:50 callBack:^(EHFormModel *model) {
