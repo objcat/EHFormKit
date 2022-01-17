@@ -21,11 +21,9 @@
 }
 
 - (IBAction)valueChanged:(id)sender {
-    if (self.callBack) {
-        UISwitch *switchz = sender;
-        self.model.on = switchz.on;
-        self.callBack(self.model);
-    }
+    UISwitch *switchz = sender;
+    self.model.on = switchz.on;
+    !self.callBack ? : self.callBack(self.model, EHFormModelEventSwitch, @{});
 }
 
 - (void)awakeFromNib {

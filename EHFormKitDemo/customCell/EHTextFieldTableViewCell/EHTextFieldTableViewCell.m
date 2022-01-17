@@ -9,7 +9,7 @@
 
 #import "EHTextFieldTableViewCell.h"
 
-@interface EHTextFieldTableViewCell ()
+@interface EHTextFieldTableViewCell () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @end
@@ -25,6 +25,13 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.textField.delegate = self;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *text = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    !self.callBack ? : self.callBack(self.model, EHFormModelEventTextFieldShouldChanged, @{@"value": text ? : @""});
+    return YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

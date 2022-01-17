@@ -31,9 +31,7 @@
 }
 
 - (void)onClick:(UIButton *)button {
-    if (self.callBack) {
-        self.callBack(self.model);
-    }
+    !self.callBack ? : self.callBack(self.model, EHFormModelEventTypeButtonTouchUpInside, @{});
 }
 
 - (void)layoutSubviews {
