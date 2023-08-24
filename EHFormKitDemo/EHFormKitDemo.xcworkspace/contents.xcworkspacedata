@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:EHFormKitDemo.xcodeproj">
+      location = "group:../EHFormKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../EHFormKit/EHFormKit.xcodeproj">
+      location = "group:EHFormKitDemo.xcodeproj">
    </FileRef>
 </Workspace>
