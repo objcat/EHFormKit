@@ -8,7 +8,6 @@
 
 #import "SecondViewController.h"
 #import <EHFormKit/EHFormKit.h>
-#import "EHTapTableViewCell.h"
 #import "EHPhoneNumberTableViewCell.h"
 #import "EHSwitchTableViewCell.h"
 #import "EHTextFieldTableViewCell.h"

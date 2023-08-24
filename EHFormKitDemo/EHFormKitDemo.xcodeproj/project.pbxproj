@@ -14,16 +14,16 @@
 		22530F77214A3B0D00223E55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22530F75214A3B0D00223E55 /* LaunchScreen.storyboard */; };
 		22530F7A214A3B0D00223E55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22530F79214A3B0D00223E55 /* main.m */; };
 		22530FD3214A4DEE00223E55 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22530FD2214A4DEE00223E55 /* SecondViewController.m */; };
+		2D8DC1702A97387E00FA8CD0 /* EHFormKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8DC16F2A97387E00FA8CD0 /* EHFormKit.framework */; };
 		2D97033E237CF12C00F8F99D /* EHPhoneNumberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970320237CF12C00F8F99D /* EHPhoneNumberTableViewCell.m */; };
 		2D97033F237CF12C00F8F99D /* EHPhoneNumberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D970321237CF12C00F8F99D /* EHPhoneNumberTableViewCell.xib */; };
 		2D970340237CF12C00F8F99D /* EHButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970323237CF12C00F8F99D /* EHButtonTableViewCell.m */; };
 		2D970342237CF12C00F8F99D /* EHSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970329237CF12C00F8F99D /* EHSwitchTableViewCell.m */; };
 		2D970343237CF12C00F8F99D /* EHSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D97032A237CF12C00F8F99D /* EHSwitchTableViewCell.xib */; };
-		2D970344237CF12C00F8F99D /* EHTapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D97032E237CF12C00F8F99D /* EHTapTableViewCell.xib */; };
-		2D970345237CF12C00F8F99D /* EHTapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D97032F237CF12C00F8F99D /* EHTapTableViewCell.m */; };
 		2D970346237CF12C00F8F99D /* EHLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970332237CF12C00F8F99D /* EHLabelTableViewCell.m */; };
 		2D970347237CF12C00F8F99D /* EHLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D970333237CF12C00F8F99D /* EHLabelTableViewCell.xib */; };
-		2DF9ACB82A9701B8006F0F56 /* EHFormKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF9ACB72A9701B8006F0F56 /* EHFormKit.framework */; };
+		2DB1F0652A973AEF0080E434 /* EHFormResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2DB1F0642A973AEF0080E434 /* EHFormResources.bundle */; };
+		2DB1F0672A973B1A0080E434 /* EHTapTableViewCell.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB1F0662A973B1A0080E434 /* EHTapTableViewCell.nib */; };
 		9A818E6E248A0B09003EC518 /* EHTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E6C248A0B09003EC518 /* EHTextFieldTableViewCell.m */; };
 		9A818E6F248A0B09003EC518 /* EHTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A818E6D248A0B09003EC518 /* EHTextFieldTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -41,6 +41,7 @@
 		22530F79214A3B0D00223E55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22530FD1214A4DEE00223E55 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		22530FD2214A4DEE00223E55 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		2D8DC16F2A97387E00FA8CD0 /* EHFormKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EHFormKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D97031F237CF12C00F8F99D /* EHPhoneNumberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHPhoneNumberTableViewCell.h; sourceTree = "<group>"; };
 		2D970320237CF12C00F8F99D /* EHPhoneNumberTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHPhoneNumberTableViewCell.m; sourceTree = "<group>"; };
 		2D970321237CF12C00F8F99D /* EHPhoneNumberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHPhoneNumberTableViewCell.xib; sourceTree = "<group>"; };
@@ -49,12 +50,11 @@
 		2D970329237CF12C00F8F99D /* EHSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSwitchTableViewCell.m; sourceTree = "<group>"; };
 		2D97032A237CF12C00F8F99D /* EHSwitchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHSwitchTableViewCell.xib; sourceTree = "<group>"; };
 		2D97032B237CF12C00F8F99D /* EHSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHSwitchTableViewCell.h; sourceTree = "<group>"; };
-		2D97032D237CF12C00F8F99D /* EHTapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTapTableViewCell.h; sourceTree = "<group>"; };
-		2D97032E237CF12C00F8F99D /* EHTapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHTapTableViewCell.xib; sourceTree = "<group>"; };
-		2D97032F237CF12C00F8F99D /* EHTapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTapTableViewCell.m; sourceTree = "<group>"; };
 		2D970331237CF12C00F8F99D /* EHLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHLabelTableViewCell.h; sourceTree = "<group>"; };
 		2D970332237CF12C00F8F99D /* EHLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHLabelTableViewCell.m; sourceTree = "<group>"; };
 		2D970333237CF12C00F8F99D /* EHLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHLabelTableViewCell.xib; sourceTree = "<group>"; };
+		2DB1F0642A973AEF0080E434 /* EHFormResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EHFormResources.bundle; path = "../../../../Library/Developer/Xcode/DerivedData/EHFormKitDemo-etcobgompykimqgpwcstlrxvtykm/Build/Products/Debug-iphonesimulator/EHFormKit.framework/EHFormResources.bundle"; sourceTree = "<group>"; };
+		2DB1F0662A973B1A0080E434 /* EHTapTableViewCell.nib */ = {isa = PBXFileReference; lastKnownFileType = file; name = EHTapTableViewCell.nib; path = "../../../../Library/Developer/Xcode/DerivedData/EHFormKitDemo-etcobgompykimqgpwcstlrxvtykm/Build/Products/Debug-iphonesimulator/EHFormKit.framework/EHTapTableViewCell.nib"; sourceTree = "<group>"; };
 		2DF9ACB72A9701B8006F0F56 /* EHFormKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EHFormKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A818E6B248A0B09003EC518 /* EHTextFieldTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EHTextFieldTableViewCell.h; sourceTree = "<group>"; };
 		9A818E6C248A0B09003EC518 /* EHTextFieldTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EHTextFieldTableViewCell.m; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DF9ACB82A9701B8006F0F56 /* EHFormKit.framework in Frameworks */,
+				2D8DC1702A97387E00FA8CD0 /* EHFormKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +76,8 @@
 		22530F5E214A3B0B00223E55 = {
 			isa = PBXGroup;
 			children = (
+				2DB1F0662A973B1A0080E434 /* EHTapTableViewCell.nib */,
+				2DB1F0642A973AEF0080E434 /* EHFormResources.bundle */,
 				22530F69214A3B0B00223E55 /* EHFormKitDemo */,
 				22530F68214A3B0B00223E55 /* Products */,
 				2DF9ACB62A9701B8006F0F56 /* Frameworks */,
@@ -124,7 +126,6 @@
 				2D97031E237CF12C00F8F99D /* EHPhoneNumberTableViewCell */,
 				2D970322237CF12C00F8F99D /* EHButtonTableViewCell */,
 				2D970328237CF12C00F8F99D /* EHSwitchTableViewCell */,
-				2D97032C237CF12C00F8F99D /* EHTapTableViewCell */,
 				2D970330237CF12C00F8F99D /* EHLabelTableViewCell */,
 			);
 			path = customCell;
@@ -159,16 +160,6 @@
 			path = EHSwitchTableViewCell;
 			sourceTree = "<group>";
 		};
-		2D97032C237CF12C00F8F99D /* EHTapTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				2D97032D237CF12C00F8F99D /* EHTapTableViewCell.h */,
-				2D97032E237CF12C00F8F99D /* EHTapTableViewCell.xib */,
-				2D97032F237CF12C00F8F99D /* EHTapTableViewCell.m */,
-			);
-			path = EHTapTableViewCell;
-			sourceTree = "<group>";
-		};
 		2D970330237CF12C00F8F99D /* EHLabelTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +173,7 @@
 		2DF9ACB62A9701B8006F0F56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D8DC16F2A97387E00FA8CD0 /* EHFormKit.framework */,
 				2DF9ACB72A9701B8006F0F56 /* EHFormKit.framework */,
 			);
 			name = Frameworks;
@@ -254,9 +246,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB1F0672A973B1A0080E434 /* EHTapTableViewCell.nib in Resources */,
+				2DB1F0652A973AEF0080E434 /* EHFormResources.bundle in Resources */,
 				22530F77214A3B0D00223E55 /* LaunchScreen.storyboard in Resources */,
 				2D970347237CF12C00F8F99D /* EHLabelTableViewCell.xib in Resources */,
-				2D970344237CF12C00F8F99D /* EHTapTableViewCell.xib in Resources */,
 				22530F74214A3B0D00223E55 /* Assets.xcassets in Resources */,
 				2D970343237CF12C00F8F99D /* EHSwitchTableViewCell.xib in Resources */,
 				22530F72214A3B0B00223E55 /* Main.storyboard in Resources */,
@@ -279,7 +272,6 @@
 				22530FD3214A4DEE00223E55 /* SecondViewController.m in Sources */,
 				2D970342237CF12C00F8F99D /* EHSwitchTableViewCell.m in Sources */,
 				9A818E6E248A0B09003EC518 /* EHTextFieldTableViewCell.m in Sources */,
-				2D970345237CF12C00F8F99D /* EHTapTableViewCell.m in Sources */,
 				2D970346237CF12C00F8F99D /* EHLabelTableViewCell.m in Sources */,
 				22530F6C214A3B0B00223E55 /* AppDelegate.m in Sources */,
 			);
@@ -422,13 +414,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EHFormKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_KEY_CFBundleDisplayName = EHFormKit;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.objcat.EHFormKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -441,13 +436,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EHFormKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_KEY_CFBundleDisplayName = EHFormKit;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.objcat.EHFormKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

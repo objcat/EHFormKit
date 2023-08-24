@@ -23,6 +23,9 @@
 		2DF9ACB32A970185006F0F56 /* EHFormTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF9ACA42A970185006F0F56 /* EHFormTextField.m */; };
 		2DF9ACB42A970185006F0F56 /* EHFormBaseTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF9ACA52A970185006F0F56 /* EHFormBaseTitleLabel.m */; };
 		2DF9ACB52A970185006F0F56 /* EHFormTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF9ACA62A970185006F0F56 /* EHFormTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DF9ACFE2A9733EE006F0F56 /* EHTapTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF9ACFB2A9733EE006F0F56 /* EHTapTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DF9ACFF2A9733EE006F0F56 /* EHTapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF9ACFC2A9733EE006F0F56 /* EHTapTableViewCell.xib */; };
+		2DF9AD002A9733EE006F0F56 /* EHTapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF9ACFD2A9733EE006F0F56 /* EHTapTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		2DF9ACA42A970185006F0F56 /* EHFormTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFormTextField.m; sourceTree = "<group>"; };
 		2DF9ACA52A970185006F0F56 /* EHFormBaseTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFormBaseTitleLabel.m; sourceTree = "<group>"; };
 		2DF9ACA62A970185006F0F56 /* EHFormTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFormTextField.h; sourceTree = "<group>"; };
+		2DF9ACFB2A9733EE006F0F56 /* EHTapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHTapTableViewCell.h; sourceTree = "<group>"; };
+		2DF9ACFC2A9733EE006F0F56 /* EHTapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHTapTableViewCell.xib; sourceTree = "<group>"; };
+		2DF9ACFD2A9733EE006F0F56 /* EHTapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHTapTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 		2DF9AC9B2A970185006F0F56 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				2DF9ACFA2A9733EE006F0F56 /* EHTapTableViewCell */,
 				2DF9AC9C2A970185006F0F56 /* EHWhiteRowTableViewCell */,
 				2DF9AC9F2A970185006F0F56 /* EHFormTableViewCell */,
 			);
@@ -151,6 +158,16 @@
 			path = EHFormBase;
 			sourceTree = "<group>";
 		};
+		2DF9ACFA2A9733EE006F0F56 /* EHTapTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DF9ACFB2A9733EE006F0F56 /* EHTapTableViewCell.h */,
+				2DF9ACFC2A9733EE006F0F56 /* EHTapTableViewCell.xib */,
+				2DF9ACFD2A9733EE006F0F56 /* EHTapTableViewCell.m */,
+			);
+			path = EHTapTableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -162,6 +179,7 @@
 				2DF9ACB52A970185006F0F56 /* EHFormTextField.h in Headers */,
 				2DF9ACAF2A970185006F0F56 /* EHWhiteRowTableViewCell.h in Headers */,
 				2DF9ACB22A970185006F0F56 /* EHFormBaseTitleLabel.h in Headers */,
+				2DF9ACFE2A9733EE006F0F56 /* EHTapTableViewCell.h in Headers */,
 				2DF9ACAA2A970185006F0F56 /* EHFormModel.h in Headers */,
 				2DF9ACAB2A970185006F0F56 /* EHItemModel.h in Headers */,
 				2DF9ACAC2A970185006F0F56 /* EHFormTableView.h in Headers */,
@@ -227,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF9ACFF2A9733EE006F0F56 /* EHTapTableViewCell.xib in Resources */,
 				2DF9ACA72A970185006F0F56 /* EHFormResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +261,7 @@
 				2DF9ACA92A970185006F0F56 /* EHFormModel.m in Sources */,
 				2DF9ACAE2A970185006F0F56 /* EHWhiteRowTableViewCell.m in Sources */,
 				2DF9ACB42A970185006F0F56 /* EHFormBaseTitleLabel.m in Sources */,
+				2DF9AD002A9733EE006F0F56 /* EHTapTableViewCell.m in Sources */,
 				2DF9ACA82A970185006F0F56 /* EHItemModel.m in Sources */,
 				2DF9ACAD2A970185006F0F56 /* EHFormTableView.m in Sources */,
 				2DF9ACB02A970185006F0F56 /* EHFormTableViewCell.m in Sources */,
