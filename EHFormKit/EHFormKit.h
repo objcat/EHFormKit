@@ -18,7 +18,7 @@ FOUNDATION_EXPORT const unsigned char EHFormKitVersionString[];
 #import <EHFormKit/EHFormTableView.h>
 #import <EHFormKit/EHFormTableViewCell.h>
 #import <EHFormKit/EHWhiteRowTableViewCell.h>
-#import <EHFormKit/EHFormTableViewCell.h>
+#import <EHFormKit/EHTapTableViewCell.h>
 
 
 
