@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "objcat" => "objcat2024@gmail.com" }
   s.platform     = :ios, "9.0"
-  s.source       = { :git => 'https://github.com/objcat/EHFormKit', :tag => s.version }
+  s.source       = { :git => 'https://github.com/objcat/EHFormKit.git', :tag => s.version }
   s.requires_arc = true
   s.source_files  = "EHFormKit/**/*.{h,m}"
 end
