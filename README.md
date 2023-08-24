@@ -3,8 +3,7 @@
 
 ## you say a xx without a picture
 
-![Image text](./image-folder/2.0.png)
-
+![Image text](./images/2.0.png)
 
 # 代码示例
 
@@ -72,6 +71,12 @@ UIColor *spaceColor = [UIColor lightGrayColor];
         [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
     }
 }];
+```
+
+# 导入
+
+```
+pod 'EHFormKit', git=>'https://github.com/objcat/EHFormKit.git'
 ```
 
 # 更新日志
