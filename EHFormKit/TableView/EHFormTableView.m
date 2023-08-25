@@ -255,12 +255,14 @@
     NSString *cellName = NSStringFromClass(model.cellClass);
     
     // 检测是否注册 经调研 反复注册并不会引发性能问题
-    if (model.useXib) {
+    if ([cellName isEqualToString:@"EHTapTableViewCell"]) {
+        [self registerNib:[UINib nibWithNibName:[NSString stringWithFormat:@"EHFormResources.bundle/%@", cellName] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:model.reuseId];
+    } else if (model.useXib) {
         [self registerNib:[UINib nibWithNibName:cellName bundle:nil] forCellReuseIdentifier:model.reuseId];
     } else {
         [self registerClass:NSClassFromString(cellName) forCellReuseIdentifier:model.reuseId];
     }
-    
+
     __weak typeof(self) weakSelf = self;
     // 使用多态节省代码
     EHFormTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:model.reuseId forIndexPath:indexPath];
@@ -272,12 +274,14 @@
         // 获取文本框所在行, 主要用于滚动到所在行, 防止键盘遮挡文本输入框, 默认不开启 autoScrollToTextField
         weakSelf.editRow = [weakSelf.sourceArray indexOfObject:formModel];
     };
+    
     // 设置是否可选中
     if (model.canSelected) {
         cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     } else {
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    
     cell.contentView.userInteractionEnabled = model.userInteractionEnabled;
     cell.backgroundColor = [UIColor clearColor];
     return cell;

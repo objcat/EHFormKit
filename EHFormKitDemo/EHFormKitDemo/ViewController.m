@@ -20,7 +20,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
     self.navigationController.navigationItem.title = @"EHFromKit";
     
     self.tableView = [EHFormTableView tableView];
@@ -34,6 +33,12 @@
         SecondViewController *second = [[SecondViewController alloc] init];
         [weakSelf.navigationController pushViewController:second animated:YES];
     }];
+    
+    id view = [[NSBundle mainBundle] loadNibNamed:@"EHFormResources.bundle/EHTapTableViewCell" owner:nil options:0];
+    NSLog(@"%@", view);
+    
+    UINib *nib = [UINib nibWithNibName:@"1" bundle:nil];
+    NSLog(@"%@", nib);
 }
 
 @end

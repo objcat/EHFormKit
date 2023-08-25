@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EHFormModel.h"
-#import "EHItemModel.h"
+#import <EHFormKit/EHFormModel.h>
+#import <EHFormKit/EHItemModel.h>
 
 @protocol EHFormTableViewDelegate <NSObject>
 @optional
