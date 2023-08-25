@@ -21,7 +21,7 @@
     [super awakeFromNib];
     // Initialization code
     self.arrowsButton.userInteractionEnabled = NO;
-    [self.arrowsButton setImage:[[UIImage imageNamed:@"EHFormResources.bundle/arrow"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    [self.arrowsButton setImage:[[UIImage imageNamed:@"EHFormKitResources.bundle/arrow"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
     self.arrowsButton.tintColor = [UIColor colorWithRed:197 / 255.0 green:197 / 255.0 blue:202 / 255.0 alpha:1];
     
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2DBF7C372A98656D00324641 /* EHTapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DBF7C352A98650500324641 /* EHTapTableViewCell.xib */; };
-		2DBF7C4D2A987D4900324641 /* EHFormResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2DBF7C4C2A987D4900324641 /* EHFormResources.bundle */; };
+		2DBF7C4D2A987D4900324641 /* EHFormKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2DBF7C4C2A987D4900324641 /* EHFormKitResources.bundle */; };
 		2DF9AC8B2A970065006F0F56 /* EHFormKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF9AC8A2A970065006F0F56 /* EHFormKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DF9ACA82A970185006F0F56 /* EHItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF9AC942A970184006F0F56 /* EHItemModel.m */; };
 		2DF9ACA92A970185006F0F56 /* EHFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF9AC952A970184006F0F56 /* EHFormModel.m */; };
@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		2DBF7C352A98650500324641 /* EHTapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EHTapTableViewCell.xib; path = ../../../EHFormKitDemo/EHTapTableViewCell.xib; sourceTree = "<group>"; };
-		2DBF7C4C2A987D4900324641 /* EHFormResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EHFormResources.bundle; sourceTree = "<group>"; };
+		2DBF7C4C2A987D4900324641 /* EHFormKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EHFormKitResources.bundle; sourceTree = "<group>"; };
 		2DF9AC872A970065006F0F56 /* EHFormKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EHFormKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF9AC8A2A970065006F0F56 /* EHFormKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EHFormKit.h; sourceTree = "<group>"; };
 		2DF9AC942A970184006F0F56 /* EHItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHItemModel.m; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		2DBF7C3B2A98687100324641 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2DBF7C4C2A987D4900324641 /* EHFormResources.bundle */,
+				2DBF7C4C2A987D4900324641 /* EHFormKitResources.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DBF7C4D2A987D4900324641 /* EHFormResources.bundle in Resources */,
+				2DBF7C4D2A987D4900324641 /* EHFormKitResources.bundle in Resources */,
 				2DBF7C372A98656D00324641 /* EHTapTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

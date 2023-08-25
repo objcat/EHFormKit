@@ -14,6 +14,7 @@
 		22530F77214A3B0D00223E55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22530F75214A3B0D00223E55 /* LaunchScreen.storyboard */; };
 		22530F7A214A3B0D00223E55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22530F79214A3B0D00223E55 /* main.m */; };
 		22530FD3214A4DEE00223E55 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22530FD2214A4DEE00223E55 /* SecondViewController.m */; };
+		2D77DF8A2A9903860050EBFE /* EHFormKitResources.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D77DF892A9903860050EBFE /* EHFormKitResources.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2D97033E237CF12C00F8F99D /* EHPhoneNumberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970320237CF12C00F8F99D /* EHPhoneNumberTableViewCell.m */; };
 		2D97033F237CF12C00F8F99D /* EHPhoneNumberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D970321237CF12C00F8F99D /* EHPhoneNumberTableViewCell.xib */; };
 		2D970340237CF12C00F8F99D /* EHButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970323237CF12C00F8F99D /* EHButtonTableViewCell.m */; };
@@ -21,7 +22,6 @@
 		2D970343237CF12C00F8F99D /* EHSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D97032A237CF12C00F8F99D /* EHSwitchTableViewCell.xib */; };
 		2D970346237CF12C00F8F99D /* EHLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D970332237CF12C00F8F99D /* EHLabelTableViewCell.m */; };
 		2D970347237CF12C00F8F99D /* EHLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D970333237CF12C00F8F99D /* EHLabelTableViewCell.xib */; };
-		2DBF7C572A98897800324641 /* EHFormResources.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2DBF7C562A98897800324641 /* EHFormResources.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A818E6E248A0B09003EC518 /* EHTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A818E6C248A0B09003EC518 /* EHTextFieldTableViewCell.m */; };
 		9A818E6F248A0B09003EC518 /* EHTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A818E6D248A0B09003EC518 /* EHTextFieldTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -33,7 +33,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				2DBF7C572A98897800324641 /* EHFormResources.bundle in CopyFiles */,
+				2D77DF8A2A9903860050EBFE /* EHFormKitResources.bundle in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +52,7 @@
 		22530F79214A3B0D00223E55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22530FD1214A4DEE00223E55 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		22530FD2214A4DEE00223E55 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		2D77DF892A9903860050EBFE /* EHFormKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EHFormKitResources.bundle; path = ../EHFormKit/Resources/EHFormKitResources.bundle; sourceTree = "<group>"; };
 		2D97031F237CF12C00F8F99D /* EHPhoneNumberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHPhoneNumberTableViewCell.h; sourceTree = "<group>"; };
 		2D970320237CF12C00F8F99D /* EHPhoneNumberTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHPhoneNumberTableViewCell.m; sourceTree = "<group>"; };
 		2D970321237CF12C00F8F99D /* EHPhoneNumberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHPhoneNumberTableViewCell.xib; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		2D970331237CF12C00F8F99D /* EHLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHLabelTableViewCell.h; sourceTree = "<group>"; };
 		2D970332237CF12C00F8F99D /* EHLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHLabelTableViewCell.m; sourceTree = "<group>"; };
 		2D970333237CF12C00F8F99D /* EHLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHLabelTableViewCell.xib; sourceTree = "<group>"; };
-		2DBF7C562A98897800324641 /* EHFormResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EHFormResources.bundle; path = ../EHFormKit/Resources/EHFormResources.bundle; sourceTree = "<group>"; };
 		9A818E6B248A0B09003EC518 /* EHTextFieldTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EHTextFieldTableViewCell.h; sourceTree = "<group>"; };
 		9A818E6C248A0B09003EC518 /* EHTextFieldTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EHTextFieldTableViewCell.m; sourceTree = "<group>"; };
 		9A818E6D248A0B09003EC518 /* EHTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EHTextFieldTableViewCell.xib; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		22530F5E214A3B0B00223E55 = {
 			isa = PBXGroup;
 			children = (
-				2DBF7C562A98897800324641 /* EHFormResources.bundle */,
+				2D77DF892A9903860050EBFE /* EHFormKitResources.bundle */,
 				22530F69214A3B0B00223E55 /* EHFormKitDemo */,
 				22530F68214A3B0B00223E55 /* Products */,
 				2DF9ACB62A9701B8006F0F56 /* Frameworks */,

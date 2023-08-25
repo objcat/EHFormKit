@@ -256,7 +256,7 @@
     
     // 检测是否注册 经调研 反复注册并不会引发性能问题
     if ([@"EHTapTableViewCell" isEqualToString:cellName]) {
-        [self registerNib:[UINib nibWithNibName:[NSString stringWithFormat:@"EHFormResources.bundle/%@", cellName] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:model.reuseId];
+        [self registerNib:[UINib nibWithNibName:[NSString stringWithFormat:@"EHFormKitResources.bundle/%@", cellName] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:model.reuseId];
     } else if (model.useXib) {
         [self registerNib:[UINib nibWithNibName:cellName bundle:nil] forCellReuseIdentifier:model.reuseId];
     } else {
